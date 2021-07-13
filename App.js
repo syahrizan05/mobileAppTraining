@@ -5,12 +5,8 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Nama saya Syahrizan Ali Hassan</Text>
-      <Text>Saya suka React Native</Text>
-      <Text>React Native sangat mudah</Text>
-      <Text>Nak view kat web</Text>
-      <Text>Hari ni dapat makanan apa?</Text>
-      <Text>Test</Text>
+      <Text>Ini Branch baru</Text>
+      
       <StatusBar style="auto" />
     </View>
   );
