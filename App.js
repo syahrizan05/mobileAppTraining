@@ -10,6 +10,7 @@ export default function App() {
       <Text>React Native sangat mudah</Text>
       <Text>Nak view kat web</Text>
       <Text>Hari ni dapat makanan apa?</Text>
+      <Text>Test</Text>
       <StatusBar style="auto" />
     </View>
   );
