@@ -1,22 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { View } from "react-native";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Ini Branch baru</Text>
+    <View style={{ flex: 1 }}>
       
-      <StatusBar style="auto" />
+      <View style={{ flex: 1, flexDirection: "row" }}>
+        <View style={{ flex: 1, backgroundColor: "yellow" }}></View>
+        <View style={{ flex: 1, backgroundColor: "darkturquoise" }}></View>
+        <View style={{ flex: 1, backgroundColor: "purple" }}></View>
+      </View>
+
+      <View style={{ flex: 5, backgroundColor: "blue" }}></View>
+
+      <View style={{ flex: 1, flexDirection:"row" }}>
+        <View style={{ flex: 1, backgroundColor: "yellow" }}></View>
+        <View style={{ flex: 1, backgroundColor: "darkturquoise" }}></View>
+      </View>
+      
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
