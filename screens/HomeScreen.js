@@ -8,9 +8,7 @@ import Schedule from "../components/Schedule";
 export default function HomeScreen() {
   return (
     <View style={{ flex: 1 }}>
-      <Header />
-
-
+      <Header title={"Home"} />
       <View style={{ flex: 5,  }}>
         <Profile />
         <Schedule />
