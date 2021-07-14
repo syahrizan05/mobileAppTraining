@@ -1,10 +1,15 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createStackNavigator } from "@react-navigation/stack";
+
 import HomeScreen from "../screens/HomeScreen";
 import ProfileScreen from "../screens/ProfileScreen";
+import { Ionicons } from "@expo/vector-icons";
+import CoursesScreen from "../screens/CoursesScreen";
 
 const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator();
 
 const Navigation = () => {
   return (
@@ -16,7 +21,7 @@ const Navigation = () => {
       >
         <Tab.Screen
           name="Home"
-          component={HomeScreen}
+          component={HomeStack}
           options={{
             tabBarLabel: "Home",
             tabBarIcon: ({ color, size }) => (
@@ -38,5 +43,18 @@ const Navigation = () => {
     </NavigationContainer>
   );
 };
+
+const HomeStack = () => {
+    return (
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}
+      >
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Courses" component={CoursesScreen} />
+      </Stack.Navigator>
+    );
+  };
 
 export default Navigation;
