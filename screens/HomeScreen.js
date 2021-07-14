@@ -10,6 +10,7 @@ export default function HomeScreen() {
     <View style={{ flex: 1 }}>
       <Header />
 
+
       <View style={{ flex: 5,  }}>
         <Profile />
         <Schedule />
