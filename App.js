@@ -1,9 +1,6 @@
 import React from "react";
-import { View } from "react-native";
-import HomeScreen from "./screens/HomeScreen";
-import CoursesScreen from "./screens/CoursesScreen";
-import ProfileScreen from "./screens/ProfileScreen";
+import Navigation from "./navigations/Navigation";
 
 export default function App() {
-  return <ProfileScreen />;
+  return <Navigation />;
 }
