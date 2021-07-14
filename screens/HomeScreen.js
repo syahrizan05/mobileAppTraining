@@ -4,6 +4,8 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Profile from "../components/Profile";
 import Schedule from "../components/Schedule";
+import News from "../components/News";
+
 
 export default function HomeScreen({navigation}) {
   
@@ -17,6 +19,7 @@ export default function HomeScreen({navigation}) {
       <View style={{ flex: 5,  }}>
         <Profile />
         <Schedule goToCourses={goToCourses} />
+        <News />
       </View>     
     </View>
   );
