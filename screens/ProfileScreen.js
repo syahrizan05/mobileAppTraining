@@ -58,7 +58,7 @@ export default function ProfileScreen() {
         </TouchableOpacity>
 
       </View>
-      <Footer />
+   
     </View>
   );
 }

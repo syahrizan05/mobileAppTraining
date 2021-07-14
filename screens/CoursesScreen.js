@@ -14,7 +14,6 @@ export default function CoursesScreen() {
           renderItem={({ item }) => <CourseCard item={item} />}
         />
       </View>
-      <Footer />
     </View>
   );
 }
@@ -25,14 +24,14 @@ const CourseCard = ({ item }) => {
       style={{
         marginBottom: 20,
         borderWidth: 1,
-        borderColor:"lightgrey",
+        borderColor: "lightgrey",
         padding: 10,
         marginHorizontal: 10,
-        backgroundColor:"ivory"
+        backgroundColor: "ivory",
       }}
     >
-      <Text style={{fontWeight:"bold"}}>{item.title}</Text>
-      <Text style={{color:"blue"}}>{item.lecturer}</Text>
+      <Text style={{ fontWeight: "bold" }}>{item.title}</Text>
+      <Text style={{ color: "blue" }}>{item.lecturer}</Text>
       <Text>{item.description}</Text>
     </View>
   );
