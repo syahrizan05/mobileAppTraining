@@ -8,7 +8,10 @@ export default function HomeScreen() {
     <View style={{ flex: 1 }}>
       <Header />
 
-      <View style={{ flex: 5, backgroundColor: "blue" }}></View>
+      <View style={{ flex: 5, backgroundColor: "blue" }}>
+        <Profile />
+        <Schedule />
+      </View>
 
       <Footer />
     </View>
