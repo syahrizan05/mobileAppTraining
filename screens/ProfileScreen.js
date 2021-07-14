@@ -1,16 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   View,
   FlatList,
   Text,
   TextInput,
   TouchableOpacity,
+  Alert
 } from "react-native";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import courses from "../data/courses";
 
 export default function ProfileScreen() {
+  const [name, setName] = useState(null);
+
+  const showContent=()=>{
+      Alert.alert(`nama : ${name}`)
+  }
+
   return (
     <View style={{ flex: 1 }}>
       <Header title={"Profile"} />
@@ -27,26 +34,29 @@ export default function ProfileScreen() {
         <TextInput
           style={{
             borderWidth: 1,
-            borderColor:"lightgrey",
+            borderColor: "lightgrey",
             marginHorizontal: 10,
             padding: 5,
             marginBottom: 10,
           }}
+          onChangeText={(value) => setName(value)}
+          value={name}
         />
 
         <TouchableOpacity
           style={{
-            
-            marginHorizontal:10,
-            padding:20,
+            marginHorizontal: 10,
+            padding: 20,
             justifyContent: "center",
             alignItems: "center",
-            borderRadius:10,
-            backgroundColor:"seagreen"
+            borderRadius: 10,
+            backgroundColor: "seagreen",
           }}
+          onPress={()=>showContent()}
         >
-          <Text style={{fontSize:17, color:"white"}}>SUBMIT</Text>
+          <Text style={{ fontSize: 17, color: "white" }}>SUBMIT</Text>
         </TouchableOpacity>
+
       </View>
       <Footer />
     </View>
