@@ -4,10 +4,10 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import courses from "../data/courses";
 
-export default function CoursesScreen() {
+export default function CoursesScreen({ navigation }) {
   return (
     <View style={{ flex: 1 }}>
-      <Header title={"Courses"} />
+      <Header title={"Courses"} back={() => navigation.goBack()} />
       <View style={{ flex: 5 }}>
         <FlatList
           data={courses}
