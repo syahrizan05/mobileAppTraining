@@ -2,15 +2,7 @@ import React from "react";
 import { View, FlatList, Text } from "react-native";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-
-const objectExample = { besar: "Medium", markah: "50" };
-const dataArray = [
-  { besar: "Medium", markah: "20" },
-  { besar: "Large", markah: "15" },
-  { besar: "Small", markah: "40" },
-  { besar: "Big", markah: "50" },
-  { besar: "Medium", markah: "35" },
-];
+import courses from "../data/courses";
 
 export default function CoursesScreen() {
   return (
@@ -18,7 +10,7 @@ export default function CoursesScreen() {
       <Header title={"Courses"} />
       <View style={{ flex: 5 }}>
         <FlatList
-          data={dataArray}
+          data={courses}
           renderItem={({ item }) => <CourseCard item={item} />}
         />
       </View>
@@ -33,12 +25,15 @@ const CourseCard = ({ item }) => {
       style={{
         marginBottom: 20,
         borderWidth: 1,
+        borderColor:"lightgrey",
         padding: 10,
         marginHorizontal: 10,
+        backgroundColor:"ivory"
       }}
     >
-      <Text> {item.besar}</Text>
-      <Text> {item.markah}</Text>
+      <Text style={{fontWeight:"bold"}}>{item.title}</Text>
+      <Text style={{color:"blue"}}>{item.lecturer}</Text>
+      <Text>{item.description}</Text>
     </View>
   );
 };
